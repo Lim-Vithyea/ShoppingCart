@@ -5,6 +5,7 @@ import Shop from './components/Shop';
 import Cart from './components/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from './components/CartContext';
+import ItemsDetail from './components/ItemsDetail';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path='/home' element={<Shop/>}/>
             <Route path='/cart' element={<Cart/>}/>
+            <Route path='/items/:id' element={<ItemsDetail/>}/>
           </Routes>
         </div>
       </BrowserRouter>
